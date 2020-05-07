@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Reg_text"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:autoText="false"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Registration"
+        app:layout_constraintBottom_toTopOf="@+id/ps_info_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        android:screenOrientation="portrait"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ps_info_txt"
+        android:layout_width="334dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginBottom="21dp"
+        android:text="Your personal information wont be used, Registration is not required"
+        app:layout_constraintBottom_toTopOf="@+id/empSpin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="61dp"
+        android:text="employment"
+        app:layout_constraintBottom_toTopOf="@+id/ageText"
+        app:layout_constraintEnd_toStartOf="@+id/empSpin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ps_info_txt" />
+
+    <Spinner
+        android:id="@+id/empSpin"
+        android:layout_width="257dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="37dp"
+        app:layout_constraintBottom_toTopOf="@+id/ageSpin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/ps_info_txt" />
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="54dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="41dp"
+        android:text="Age"
+        app:layout_constraintBottom_toTopOf="@+id/gender"
+        app:layout_constraintEnd_toStartOf="@+id/ageSpin"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/ageSpin"
+        android:layout_width="258dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/genderSpin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="50dp"
+        android:text="gender"
+        app:layout_constraintBottom_toTopOf="@+id/pre_exist"
+        app:layout_constraintEnd_toStartOf="@+id/genderSpin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/genderSpin"
+        android:layout_width="257dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/prexSpin"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/prexSpin"
+        android:layout_width="256dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/Submit"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/pre_exist"
+        android:layout_width="83dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="296dp"
+        android:text="Pre existing Condition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="285dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="63dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Submit Information"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pre_exist" />
+</androidx.constraintlayout.widget.ConstraintLayout>
