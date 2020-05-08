@@ -504,7 +504,7 @@ public class BackgroundService extends Service implements LocationListener {
                         MFCC m = new MFCC();
                        float[] spectrogram =  m.process(convertArr(audioBytes));
                        double[][] sp = m.melSpectrogram(convertArr(audioBytes));//m.dctMfcc(convertArr(audioBytes));
-                       //conductInference(sp);
+                       conductInference(sp);
                        Log.d("woof","created spectogram "+spectrogram.length);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -540,6 +540,8 @@ public class BackgroundService extends Service implements LocationListener {
         float[][][][] inp = new float[1][128][44][1];
         for(int i= 0;i<128;i++){
             for(int j=0;j<44;j++){
+                if(i >= spec.length)return;
+                if(j >= spec[0].length)return;
                 inp[0][i][j][0] = (float) spec[i][j];
             }
         }

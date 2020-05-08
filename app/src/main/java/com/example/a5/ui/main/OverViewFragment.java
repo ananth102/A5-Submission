@@ -73,12 +73,7 @@ public class OverViewFragment extends Fragment {
         mNewDevicesArrayAdapter = new ArrayList<String>();
         final View root = inflater.inflate(R.layout.overview_view, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
-        //mBtAdapter = BluetoothAdapter.getDefaultAdapter();
-        //Log.d("woof", mBtAdapter+"");
-        // Register for broadcasts when a device is discovered
 
-        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
-        //this.getContext().registerReceiver(mReceiver, filter);
         ArrayList<Double> loc_scores = new ArrayList<Double>();
         ArrayList<Double> blu_scores = new ArrayList<Double>();
         getPreviousScores(loc_scores,blu_scores);
@@ -100,10 +95,6 @@ public class OverViewFragment extends Fragment {
         }
 
 
-        // Register for broadcasts when discovery has finished
-        filter = new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
-        //this.getContext().registerReceiver(mReceiver, filter);
-        //doDiscovery();
 
         serverBu = (Button)root.findViewById(R.id.send_server);
         serverBu.setOnClickListener(new View.OnClickListener() {
@@ -144,17 +135,6 @@ public class OverViewFragment extends Fragment {
         return root;
     }
 
-//    public void onDestroy() {
-//        super.onDestroy();
-//
-//        // Make sure we're not doing discovery anymore
-//        if (mBtAdapter != null) {
-//            mBtAdapter.cancelDiscovery();
-//        }
-//
-//        // Unregister broadcast listeners
-//        //this.getContext().unregisterReceiver(mReceiver);
-//    }
 
     public void sendToServer(){
         File directory = getContext().getFilesDir();
@@ -361,16 +341,5 @@ public class OverViewFragment extends Fragment {
         }
     }
 
-//    private void doDiscovery() {
-//        Log.d("woof", "doDiscovery()");
-//
-//        // If we're already discovering, stop it
-////        if (mBtAdapter.isDiscovering()) {
-////            mBtAdapter.cancelDiscovery();
-////        }
-//
-//        // Request discover from BluetoothAdapter
-//        mBtAdapter.startDiscovery();
-//    }
 
 }

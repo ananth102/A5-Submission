@@ -51,7 +51,7 @@ public class Classifier {
 
     private static MappedByteBuffer loadModelFile(AssetManager assetManager)
             throws IOException {
-        AssetFileDescriptor fileDescriptor = assetManager.openFd("wof.tflite");
+        AssetFileDescriptor fileDescriptor = assetManager.openFd("wof2.tflite");
         FileInputStream inputStream = new FileInputStream(fileDescriptor.getFileDescriptor());
         FileChannel fileChannel = inputStream.getChannel();
         long startOffset = fileDescriptor.getStartOffset();
